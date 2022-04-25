@@ -1,0 +1,300 @@
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+
+
+
+
+
+*{
+// Utilisation de la propriété margin definissant la taille des marges sur lesquatres cotés de l'élément.
+    margin:0; //Calibré à 0 
+padding: 0; // Calibré à 0 
+
+
+}
+
+
+///////////////////HEADER///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+header {
+   
+//    Utlisation de la propitété display definissant le type d'affichage utilisée pour le rendu d'un element 
+//   Utilisation de la propriété raccourcie flex definissant la capacité d'un element à modifier ses dimensions et à remplir l'espace disponible de son conteneur 
+display: flex;
+   
+
+// Utilisation de la propriété flex-direction definisssant la façon dont les elements flexibles sont placés dans le conteneur
+
+//Dans ce cas de figure ils seront placées en colonne 
+flex-direction: column;
+   
+
+border-bottom: solid 1px rgb(235, 235,241);
+    font-family:"futura";
+
+    nav{
+        background: rgb(207, 68, 68);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height:50px;
+        width: 100%;
+
+        ul{ 
+            display: flex; 
+            justify-content: space-around;
+            align-content: center;
+            
+        li{
+           text-transform: uppercase;
+            padding:6px 0;
+             a{
+                text-decoration:none;
+                 border-radius: 5px ;
+                color:rgb(235, 20, 20);
+
+             }
+        
+        
+        }
+        
+        
+        }
+
+
+    }
+
+div { 
+    margin-top:50px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        color:black;
+        align-items:center;
+    }
+
+}
+
+
+}
+
+
+/////MAIN///////////////////////////////////////
+main{
+    margin-top: 70px;
+    margin-left:25%;
+    margin-right:25%;
+    margin-bottom: 70px;
+    text-align: justify;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// footer/////////////////////////////////////////////////::
+footer {
+    display: flex;
+    justify-content: space-around;
+    background: $color1;
+    height: 50px;
+    align-items: center;
+    font-family: "Roboto";
+
+    nav {
+        ul {
+            display: flex;
+
+            li {
+                list-style-type: none;
+                margin-left: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: $color4;
+
+
+                    svg {
+                        height: 20px;
+                        width: 20px;
+
+
+                    }
+                }
+            }
+        }
+    }
+}

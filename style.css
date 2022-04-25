@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: solid 1px #ebebf1;
+  font-family: "futura";
+}
+
+header nav {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+header nav ul li {
+  padding: 6px 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+}
+
+header div {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header div h1 {
+  color: black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  margin-top: 70px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 70px;
+  text-align: justify;
+}
+/*# sourceMappingURL=style.css.map */
