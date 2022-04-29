@@ -34,7 +34,7 @@ require("./connexion_traitement.php");
 
         <!-- Utilisation d'<input> permettant à l'admin de saisir des données dependant de la valeur indiquée dans son attribut type  -->
 
-        <!-- Utilisatio nde la balise div stipulant une separation entre les corps de la page  -->
+        <!-- Utilisation de la balise div stipulant une separation entre les corps de la page  -->
         <div>
 
             <input type="email" name="email" placeholder="Entrez l'adresse email" class="form-label">

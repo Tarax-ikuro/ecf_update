@@ -27,10 +27,9 @@ var_dump($_SESSION);
             <!-- LISTE -->
             <!--Mise en place de la balise <ul> representant une liste d'élements   -->
             <ul>
-                <!-- Utilisation de la balsie <li> representant un élément daans une liste -->
+                <!-- Utilisation de la balise <li> representant un élément daans une liste -->
+                <!-- Utilsation de l'ancre a  -->
                 <li><a href="./index.php">ACCUEIL</a> </li>
-
-                <li><a href="catalogue.php">CATALOGUE</a></li>
                 <li><a href="./inscription.php">INSCRIPTION</a></li>
                 <li><a href="./connexion.php">CONNEXION</a></li>
                 <li><a href="logout.php">DECONNEXION</a> </li>
