@@ -2,59 +2,84 @@
 session_start();
 include("./lesboss/header.php");
 require 'config.php';
-
+include("./emprunt.php");
 //On recupere l'id  
 $id = $_GET['id'];
 
-//On recupre l'article 
+//On recupre l'article Mise en palce de la requete 
+// ON prepare la requete 
 
+// On prepare la requete avec la requete SQL SELECT 
+// Utilisation de * stipulant une selection globale des colonnes selecitonnés  
+// Utilisation de ? stipulant la donnée rentrée lors de la saisie
 $reponse = $dbname->prepare('SELECT * FROM articles WHERE id_article = ?');
+
+// On execute la requete 
+// Execution de la requete avec le stockage de la session dnas un tableau 
 $reponse->execute([$id]);
+
+// On fetch le tout 
 $fin = $reponse->fetch();
 
-if ($_SESSION["role"] == "utilisateur") {
+
+// Detection de la utilisateur 
+// Si la condition est réunie alors execution du conde dans les accolades 
+if (($_SESSION["role"] == "utilisateur") || ($_SESSION["role"] == "admin")) {
 
 ?>
 
 
+    <!-- Utilisation de la balise section  representant un groupe de contenu thematique -->
+    <section class="section_article">
+        <!-- Utilisation de la balise img src stipulant l'image se trouvant dans la table fichier -->
+        <img src="<?php echo $fin['fichier']; ?>">
+        <p>
 
-    <section class="section_article"></section>
-    <img src="<?php echo $fin['fichier']; ?>">
-    <p>
-        <?php
-        echo $fin['auteur'];
-        ?>
-    <h2> <?php echo $fin['titre']  ?></h2>
+            <!-- Apparition de la variable stockant l'auteur dans un tableau  -->
+            <?php
+            echo $fin['auteur'];
+            ?>
+            <!-- Apparition de la variable stockant le titre dans un tableau  -->
+        <h2> <?php echo $fin['titre'];  ?></h2>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam modi placeat est aliquam earum recusandae, debitis doloribus ratione architecto, vitae ex quibusdam. Dolorum molestiae
-    praesentium, eos veniam numquam sint ex!
-    </p>
-    <hr>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam modi placeat est aliquam earum recusandae, debitis doloribus ratione architecto, vitae ex quibusdam. Dolorum molestiae
+        praesentium, eos veniam numquam sint ex!
+        </p>
 
-    <!-- A completer  -->
-    <form action="./articles_traitement.php" method="GET">
-        <h3>Modifier</h3>
+        <!-- Mise en place de la form action de utilisation de la methode post  -->
+        <form action="emprunt.php" method="POST">
 
-        <!-- Utilisation de la balise input permettant à l'utilsiateur de saisir des données depndant de la valeur dans son attribut type  -->
-        <input hidden type="text" name="id_article">
+            <!-- Mise en place des input hidden de type texte utilisant comme valeur les valeurs recupéré dans d'autres pages  -->
+            <input hidden type="text" name="id_article" value="<?= $fin['id_article']; ?>">
+
+            <!-- Mise en place des input hidden de type texte utilisant comme valeur la session enregistré  -->
+            <input hidden type="text" name="id_users" value="<?= $_SESSION['id']; ?>">
+
+            <!-- Mise en place de la balise button name  -->
+            <button name="emprunter">Emprunter</button>
+
+        </form>
+        <hr>
+
+        <!-- A completer  -->
+        <form action="./articles_traitement.php" method="GET">
 
 
-        <input type="submit" value="retour">
+            <!-- Utilisation de la balise input permettant à l'utilsiateur de saisir des données depndant de la valeur dans son attribut type  -->
+            <input hidden type="text" name="id_article">
 
-        <!-- Mise en place de l'input hidden correspondant à la detection du role pendant la session -->
-        <input hidden type="text" name="id_users" value="<?= $_SESSION['id'] ?>">
-    </form>
 
-    <!-- Utilisation de la balise img src stipulant l'image se trouvant dans la table fichier -->
+            <input type="submit" value="">
 
-    <img src="img/<?php echo $reponse['fichier']; ?>">
+            <!-- Mise en place de l'input hidden correspondant à la detection du role pendant la session -->
 
-    <!-- Utilisation du Lorem ipsum  -->
+        </form>
 
-    <h4>Nulla gravida condimentum justo nec rhoncus</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae illum doloribus expedita laboriosam, temporibus vel architecto molestiae fugit nisi nesciunt officiis aperiam nulla,
-        fugiat incidunt error consectetur molestias non distinctio.</p>
-    <button type="submit" class="form form-control" action="voir" class="btn btn-primary"><a class="voir" href="recette.php">Voir plus</a></button>
+
+
+
+        <!-- Utilsiation de la balise button de type submit stipulant une execution de formulaire  -->
+        <button type="submit" class="form form-control" action="voir" class="btn btn-primary"><a class="voir" href="recette.php">Voir plus</a></button>
     </section>
 
     </main>

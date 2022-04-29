@@ -2,20 +2,23 @@
 
 require_once 'config.php';
 
-
+// Mise d'une condition sur des declarations de varialbes 
+// Utilisation de la fonction isset stipulant si une variable est declarée et differente de null 
 if (isset($_POST['email']) && isset($_POST['mdp']) && isset($_POST['pseudo'])) {
 
 
 
     // connexion à la base de données
+
+    // on applique les  fonctions  htmlspecialchars
+    // pour éliminer toutes attaques de type injection SQL et XSS
     $email = htmlspecialchars($_POST['email']);
     $mdp = htmlspecialchars($_POST['mdp']);
 
     $pseudo = htmlspecialchars($_POST['pseudo']);
 
 
-    // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
-    // pour éliminer toutes attaques de type injection SQL et XSS
+
 
 
 
@@ -76,6 +79,7 @@ if (isset($_POST['email']) && isset($_POST['mdp']) && isset($_POST['pseudo'])) {
         }
         // Selon les conditions activés redirection vers les pages correpsondantes
 
+        // Selon les conditions activés redirection vers les pages correspondantes 
     } else {
         header('Location:index.php?erreur=2'); // utilisateur ou mot de passe vide
     }

@@ -7,7 +7,7 @@ include_once("./inscription_traitement.php");
 ?>
 <!--  utilisation d'article> destiné à être distribué ou réutiliser de manière independante -->
 
-<article class="mb-3" style="width: 18rem;">
+<article class="mb-3">
 
     <!-- Ajout de h2 pour dimensionner une taille de police équivalent à un tritre  -->
     <h2>Inscription</h2>
@@ -22,7 +22,7 @@ include_once("./inscription_traitement.php");
         <div>
 
             <!-- Utilisation d'<input> permettant de saisir des données dependant de la valeur indiquée dans son attribut type  -->
-            <input type="text" name="prenom" placeholder="Prenom" class="form-label">
+            <input type="text" name="prenom" placeholder="Prenom">
             <div>
                 <input type="text" name="nom" placeholder="Nom" class="form-label">
             </div>
@@ -33,7 +33,7 @@ include_once("./inscription_traitement.php");
 
             <input type="text" name="adresse" placeholder="Adresse" class="form-label">
 
-            <input type="text" name="ville" placholder="ville" class="form-label">
+            <input type="text" name="ville" placeholder="ville" class="form-label">
 
             <input type="text" name="cp" placeholder="Code Postal" class="form-label">
 

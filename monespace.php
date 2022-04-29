@@ -20,72 +20,77 @@ include("./monespace_traitement.php");
     <head>
 
     <body>
-        <h2> Voici le profil de <?= $afficher_profil['prenom'] . $afficher_profil['nom']; ?></h2>
+        <form>
+            <h2> Voici le profil de <?= $afficher_profil['prenom'] . $afficher_profil['nom']; ?></h2>
 
 
 
-        <input type="text" id=name name="name" value="<?= $afficher_profil['prenom'] ?>">
-        <input type="text" id="name" name="name" value="<?= $afficher_profil['nom'] ?>">
+            <input type="texte" id=name name="name" value="<?= $afficher_profil['prenom'] ?>">
+            <input type="texte" id="name" name="name" value="<?= $afficher_profil['nom'] ?>">
 
 
 
-        <!-- LISTE  -->
+            <!-- LISTE  -->
 
-        <!-- Affichage des informations sous forme d'une liste  -->
-        <ul>
+            <!-- Affichage des informations sous forme d'une liste  -->
+            <ul>
 
-            <li>Votre id est: </li>
+                <li>Votre id est: </li>
 
-            <!-- Uitilisation de l'element input ayant pour valeur une variable stockant un tableau contenant l'element id_users de la bdd -->
-            <input type="text" id="name" name="name" value="<?= $afficher_profil['id_users'] ?>">
-
-
-
-
-            <li> Votre adresse email est :</li>
-            <!-- Utilisation de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element email enregistrer dans la bdd  -->
-            <input type="text" name="name" value="<?= $afficher_profil['email'] ?>">
+                <!-- Uitilisation de l'element input ayant pour valeur une variable stockant un tableau contenant l'element id_users de la bdd -->
+                <input type="texte" id="name" name="name" value="<?= $afficher_profil['id_users'] ?>">
 
 
 
-            <li> Votre mot de passe est: </li>
-            <!-- Utilisation de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element mdp enregistré dans la bdd -->
-            <input type="texte" id="name" name="name" value="<?= $afficher_profil['mdp'] ?>">
+
+                <li> Votre adresse email est :</li>
+                <!-- Utilisation de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element email enregistrer dans la bdd  -->
+                <input type="texte" name="name" value="<?= $afficher_profil['email'] ?>">
 
 
 
-            <li> votre adresse est : </li>
-            <!-- Utilisation de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element adresse enregistré  dans la bdd  -->
-            <input type="texte" id="name" name="name" value="<?= $afficher_profil['adresse'] ?>">
+                <li> Votre mot de passe est: </li>
+                <!-- Utilisation de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element mdp enregistré dans la bdd -->
+                <input type="texte" id="name" name="name" value="<?= $afficher_profil['mdp'] ?>">
 
 
 
-            <li> Votre ville est: </li>
-            <!-- Utilsition de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element ville enregistré dans la bdd -->
-            <input type="texte" id="name" name="name" value="<?= $afficher_profil['ville'] ?>">
+                <li> votre adresse est : </li>
+                <!-- Utilisation de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element adresse enregistré  dans la bdd  -->
+                <input type="texte" id="name" name="name" value="<?= $afficher_profil['adresse'] ?>">
 
 
-            <li> votre code postal est: </li>
-            <!-- Utilsiaiton de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element cp enregistré dans la bdd -->
-            <input type="texte" id="name" name="name" value="<?= $afficher_profil['cp'] ?>">
+
+                <li> Votre ville est: </li>
+                <!-- Utilsition de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element ville enregistré dans la bdd -->
+                <input type="texte" id="name" name="name" value="<?= $afficher_profil['ville'] ?>">
 
 
-            <li> Vous êtes un : </li>
-            <!-- Utilisation de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element type enregistré dans la bdd  -->
-            <input type="texte" id="name" name="name" value="<?= $afficher_profil['type'] ?>">
+                <li> votre code postal est: </li>
+                <!-- Utilsiaiton de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element cp enregistré dans la bdd -->
+                <input type="texte" id="name" name="name" value="<?= $afficher_profil['cp'] ?>">
 
 
-            <!-- Utilisation de l'element input ayant pour valeur une variable stockant sous forme de tableau l'elemnt  -->
-            <li> Votre pseudo est: </li>
-            <input type="texte" id="name" name="name" value="<?= $afficher_profil['pseudo'] ?>">
+                <li> Vous êtes un : </li>
+                <!-- Utilisation de l'element input ayant pour valeur une variable stockant sous forme de tableau l'element type enregistré dans la bdd  -->
+                <input type="texte" id="name" name="name" value="<?= $afficher_profil['type'] ?>">
 
 
-        </ul>
+                <!-- Utilisation de l'element input ayant pour valeur une variable stockant sous forme de tableau l'elemnt  -->
+                <li> Votre pseudo est: </li>
+                <input type="texte" id="name" name="name" value="<?= $afficher_profil['pseudo'] ?>">
 
-        <a href="modprofil.php">Modifier son profil </a>
-        <a href="allusers.php">Afficher tous les adhérents </a>
 
+            </ul>
 
+            <!-- Utilisation de la balise avec son attribut href créant des liens hypertexte pertteant la redirection de pages   -->
+            <a href="modprofil.php"><button>Modifier son profil</a> </button>
+
+            <a href="allusers.php"><button>Afficher tous les adhérents </a></button>
+
+            <a href="mesemprunts.php"><button>Mes emprunts</a></button>
+
+        </form>
 
     </body>
 

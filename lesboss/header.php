@@ -11,7 +11,7 @@ var_dump($_SESSION);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
 
 
 
@@ -20,7 +20,7 @@ var_dump($_SESSION);
 
 <body>
 
-    <header>
+    <header id="header">
         <!-- Mise en place d'une balise <nav> representant une section d'une page ayant des liens vers d'autres pages  -->
         <nav>
 

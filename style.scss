@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
-
-
+$color1: #ffffff;
+$color2: #000000; //bleu 
+$color3: #8fe1fa;
+$color4: #eef10a;
 
 
 
@@ -9,7 +11,7 @@
 // Utilisation de la propriété margin definissant la taille des marges sur lesquatres cotés de l'élément.
     margin:0; //Calibré à 0 
 padding: 0; // Calibré à 0 
-
+box-sizing:border-box;
 
 }
 
@@ -19,7 +21,7 @@ padding: 0; // Calibré à 0
 
 
 
-header {
+#header {
    
 //    Utlisation de la propitété display definissant le type d'affichage utilisée pour le rendu d'un element 
 //   Utilisation de la propriété raccourcie flex definissant la capacité d'un element à modifier ses dimensions et à remplir l'espace disponible de son conteneur 
@@ -30,31 +32,35 @@ display: flex;
 
 //Dans ce cas de figure ils seront placées en colonne 
 flex-direction: column;
-   
+align-items: center;
 
-border-bottom: solid 1px rgb(235, 235,241);
-    font-family:"futura";
+border-bottom: solid 1px $color3;
+font-family:"futura";
+//width:100%;
 
+
+// Utilisation de 
     nav{
-        background: rgb(207, 68, 68);
-        position: fixed;
-        top: 0;
-        left: 0;
+        background:$color3; 
+        
         height:50px;
-        width: 100%;
-
+          border-radius: 30px ;
+          width: 900px;
         ul{ 
+
             display: flex; 
-            justify-content: space-around;
-            align-content: center;
-            
+            justify-content: center;
+            gap: 10px;
+            //cursor:pointer;   
         li{
            text-transform: uppercase;
             padding:6px 0;
-             a{
+            list-style: none;
+          
+            a{
                 text-decoration:none;
-                 border-radius: 5px ;
-                color:rgb(235, 20, 20);
+               
+                color:rgb(0, 0, 0);
 
              }
         
@@ -74,7 +80,7 @@ div {
     align-items: center;
 
     h1{
-        color:black;
+        color:rgba(0, 0, 0, 0.712);
         align-items:center;
     }
 
@@ -91,7 +97,247 @@ main{
     margin-right:25%;
     margin-bottom: 70px;
     text-align: justify;
+    background-color: rgba(182, 197, 204, 0.205);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
+    //PAGE d'accueil (index)
+.card { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   gap:20px;
+    img:hover{
+        transform:scale(1.5);
+        height:250px;
+        width:250px;
+        // margin-right: 20px;
+        background-size:cover;
+    }
+    h1{
+        margin-bottom:10px
+    }
+
+    p{
+        text-align: justify;
+    }
+
+    .show{
+      
+        button{
+            background-color: $color3;
+            border:none;
+        }
+    }
+
+}
+
+
+///// Page d'inscription //
+.mb-3{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        margin-bottom: 10px;
+        
+    }
+    form{
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            input[type=text]{
+                border: 2px solid #39ddfa;
+                border-radius: 5px;
+              
+            }
+          
+          
+            input[type=email]{
+                border: 2px solid #39ddfa;
+                border-radius: 4px;
+            }
+       
+            input[type=password]{
+                border: 2px solid #39ddfa;
+                border-radius: 4px;
+            }  
+      
+            input[type=password]{
+                border: 2px solid #39ddfa;
+                border-radius: 4px;
+            }  
+    
+    
+    
+    
+        }
+
+      .submit{
+          border-radius:5px;
+          border:none;
+          background-color: $color3;
+      }  
+    }
+
+
+}
+
+//Page de connexion 
+
+.mb-3{
+
+   
+    form{
+
+        div{
+            input[type=pseudo]{
+                border: 2px solid #39ddfa;
+                border-radius: 5px;
+        }
+
+    }
+    button{
+        border-radius:5px;
+        border:none;
+        background-color: $color3;
+        
+    }
+
+
+}
+
+
+}
+
+// Page ajoutart////
+.ajout{
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+       
+        input[type=text]{
+            border: 2px solid #39ddfa;
+            border-radius: 5px;
+    }
+        input[type=date]{
+            border:2px solid #39ddfa;
+            border-radius:5px;
+        }
+        
+        #name{
+            border:2px solid #39ddfa;
+            border-radius:5px;
+        }
+        
+        input[type=file]{
+            border:2px solid #39ddfa;
+            border-radius:5px;
+        }
+        input[type=submit]{
+            border-radius:5px;
+            border:none;
+            background-color: $color3;
+        }  
+      
+   
+    }
+
+}
+
+//Page mon espace 
+
+
+   form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+   
+        h2{
+            margin-bottom: 10px;
+        }
+        ul{
+            
+        li{
+            list-style: none;
+            
+        }
+        
+        
+        
+            input[type=texte]{
+            border-radius:5px;
+            border:none;
+            background-color: $color3;
+        }  
+
+    
+    
+    }
+
+    a{
+        border-radius:5px;
+        border:none;
+        background-color:$color3;
+        text-decoration: none;
+        color:#000000;
+    }
+
+    button{
+        border:none;
+    
+    }
+
+
+   }
+
+
+//Page modprofil 
+
+   div{
+
+        h2{
+           margin-bottom: 10px;
+
+        }
+
+        form{
+            label{
+                color:black;
+            }
+       
+            input[type=text]{
+                border: 2px solid #39ddfa;
+                border-radius: 5px;
+       
+        }
+       
+        input[type=password]{
+            border: 2px solid #39ddfa;
+            border-radius: 5px;
+ 
+   
+   
+    }
+
+//Page articles
+
+.section_article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img{
+        align-items:center;
+    }
+    h2{
+        align-items: center;
+    }
 
 
 }
@@ -115,161 +361,16 @@ main{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// footer/////////////////////////////////////////////////::
+   // footer///////////////////////////////////////////////////
+
+}
+}
+}
 footer {
     display: flex;
     justify-content: space-around;
-    background: $color1;
+    background: rgba(182, 197, 204, 0.205);
+
     height: 50px;
     align-items: center;
     font-family: "Roboto";
@@ -284,7 +385,7 @@ footer {
 
                 a {
                     text-decoration: none;
-                    color: $color4;
+                    color: $color3;
 
 
                     svg {

@@ -1,6 +1,8 @@
 <?php
 require_once 'config.php';
 
+
+// Mise en place des conditions prenant en compte les differents champs 
 if (isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['mdp']) && isset($_POST['adresse']) && isset($_POST['ville']) && isset($_POST['cp']) && isset($_POST['pseudo'])) {
 
     // mise en place des specialchars convertissants des caractères spéciaux en php 

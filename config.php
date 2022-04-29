@@ -13,5 +13,6 @@ session_start();
 try {
     $dbname = new PDO('mysql:host=localhost;dbname=arMediaBdd', 'ARIAS', 'ARIAS');
 } catch (Exception $e) {
+    //  Utilisation de la fonction integrée pour afficher le message et quitter le script php actuel 
     die('could not connect to database' . $e->getMessage());
 }

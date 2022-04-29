@@ -4,14 +4,14 @@ include("./lesboss/header.php");
 include("./index_traitement.php");
 require 'config.php';
 ?>
-<!-- Mise ne place d'une boucle foreach servant à créer une boucle -->
+<!-- Mise en place d'une boucle foreach servant à créer une boucle -->
 <?php foreach ($reponse as $requeteShow) :
 ?>
 
     <!-- Mise en place d'une balise <article> qui représente une composition autonome dans un document une page de manière être réutiliser de manière independante   -->
     <article class="card">
 
-
+        <!-- Utilisation de la balise img src stipulant la mise en place d'une image   -->
         <img src="<?php echo $requeteShow['fichier'] ?>">
 
 
@@ -24,27 +24,27 @@ require 'config.php';
         <p class="text-center"> Auteur: <?php echo $requeteShow['auteur'] ?> </p>
 
 
-        <!-- Utilisation d'echo affichant une chaîne de caractères dans se cas de figure le genre apparaitra  -->
+        <!-- Utilisation d'echo affichant une chaîne de caractères dans ce cas de figure le genre apparaitra  -->
 
         <p> Genre: <?php echo $requeteShow['genre'] ?> </p>
 
 
-        <!-- Utilisation d'echo affichant une chaîne de caractères dans se cas de figure la date de publication apparaitra  -->
+        <!-- Utilisation d'echo affichant une chaîne de caractères dans ce cas de figure la date de publication apparaitra  -->
 
         <p>Date de publication: <?php echo $requeteShow['date_publi'] ?> </p>
 
 
-        <!-- Utilisation d'echo affichant une chaîne de caractères dans se cas de figure qon id apparaitra  -->
+        <!-- Utilisation d'echo affichant une chaîne de caractères dans ce cas de figure qon id apparaitra  -->
 
         <p> <?php echo $requeteShow['id_categorie']  ?> </p>
 
-        <!-- Utilisation d'echo affichant une chaîne de caractères dans se cas de figure la maison d'edition  apparaitra  -->
+        <!-- Utilisation d'echo affichant une chaîne de caractères dans ce cas de figure la maison d'edition  apparaitra  -->
 
         <p>Edition:<?php echo $requeteShow['edition'] ?> </p>
 
         <!-- Utilisation d'echo affichant une chaine de caractère dans ce cas de figure l'emprunt apparaitra  -->
 
-        <p><?php echo $requeShow['emprunt'] ?> </p>
+        <p><?php echo $requeteShow['emprunt'] ?> </p>
 
         <!-- Utilisation d'echo affichant une chaine de caractère dans ce cas de figure la collection apparaitra-->
 
@@ -63,3 +63,6 @@ require 'config.php';
         <!-- Mise en place de la syntaxe de fermeture endforeach -->
     <?php endforeach ?>
     </article>
+    <?php
+    require_once("./lesboss/footer.php");
+    ?>

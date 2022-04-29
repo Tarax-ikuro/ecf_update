@@ -11,7 +11,7 @@ require("./connexion_traitement.php");
  Elle fonctionne comme un tableau -->
 
 <!-- Utilisation d'<article> destinée à être distribuée ou réutiliser de manière indépendante -->
-<article class="mb-3" style="width: 18rem;">
+<article class="mb-3">
 
 
 
@@ -19,7 +19,7 @@ require("./connexion_traitement.php");
 
     <!-- Ajout de h2 pour dimensionner une taille de police équivalente à un titre -->
 
-    <h2 class="text-center">Connexion</h2>
+    <h2>Connexion</h2>
 
 
 
@@ -34,7 +34,9 @@ require("./connexion_traitement.php");
 
         <!-- Utilisation d'<input> permettant à l'admin de saisir des données dependant de la valeur indiquée dans son attribut type  -->
 
+        <!-- Utilisatio nde la balise div stipulant une separation entre les corps de la page  -->
         <div>
+
             <input type="email" name="email" placeholder="Entrez l'adresse email" class="form-label">
             <input type="password" name="mdp" placeholder="Entrez le mode de passe" class="form-label">
             <input type="pseudo" name="pseudo" placeholder="Entrez le pseudo" class="form-label">
